@@ -1,0 +1,242 @@
+.a {
+  background-color: gainsboro;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #dcdcdc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+section {
+  padding: 10px;
+}
+
+nav {
+  background-color: #76fbfd;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+}
+
+nav h1 {
+  font-size: 1.4rem;
+  color: #000;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+nav a {
+  background: #1d3b4a;
+  color: white;
+  padding: 10px 18px;
+  margin: 3px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background: #1b7f99;
+  outline: none;
+}
+
+.banner {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.b {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+}
+
+.box {
+  flex: 1;
+}
+
+#about {
+  border: 2px solid #1d3b4a;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.about,
+.goal,
+.benefit {
+  border: 2px solid #0b3c49;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.about,
+.benefit {
+  margin: 30px 350px 30px 30px;
+}
+
+.goal {
+  margin: 30px 30px 30px 350px;
+}
+
+.about h2,
+.goal h2,
+.benefit h2 {
+  margin-bottom: 8px;
+}
+
+.about p,
+.goal p,
+.benefit p {
+  line-height: 1.6;
+}
+
+.phone,
+.tablet,
+.laptop {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.honor, .iqoo, .xiaomi, .motorola, .vivo,
+.xiaomipad, .iqoopad, .rmagicpad, .legion, .vivopad,
+.macbook, .omnibook, .asus, .lenovoyogaslim, .razer {
+  border: 2px solid #0b3c49;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px auto;
+  width: 92%;
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+:is(.honor, .iqoo, .xiaomi, .motorola, .vivo,
+.xiaomipad, .iqoopad, .rmagicpad, .legion, .vivopad,
+.macbook, .omnibook, .asus, .lenovoyogaslim, .razer) h2 {
+  grid-column: 1 / -1;
+  order: -1;
+  text-align: center;
+}
+
+:is(.honor, .iqoo, .xiaomi, .motorola, .vivo,
+.xiaomipad, .iqoopad, .rmagicpad, .legion, .vivopad,
+.macbook, .omnibook, .asus, .lenovoyogaslim, .razer) img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+:is(.honor, .iqoo, .xiaomi, .motorola, .vivo,
+.xiaomipad, .iqoopad, .rmagicpad, .legion, .vivopad,
+.macbook, .omnibook, .asus, .lenovoyogaslim, .razer) ul {
+  display: block;
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.contact {
+  border: 2px solid #0b3c49;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px auto;
+  width: 92%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+}
+
+.contact ul {
+  display: block;
+  list-style: none;
+}
+
+.contact li {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+@media (max-width: 700px) {
+
+  .row {
+    flex-direction: column;
+  }
+
+  img {
+    height: 250px;
+  }
+
+  .about,
+  .goal,
+  .benefit {
+    margin: 16px auto;
+    width: 92%;
+  }
+
+  .honor, .iqoo, .xiaomi, .motorola, .vivo,
+  .xiaomipad, .iqoopad, .rmagicpad, .legion, .vivopad,
+  .macbook, .omnibook, .asus, .lenovoyogaslim, .razer {
+    grid-template-columns: 1fr;
+  }
+
+  :is(.honor, .iqoo, .xiaomi, .motorola, .vivo,
+  .xiaomipad, .iqoopad, .rmagicpad, .legion, .vivopad,
+  .macbook, .omnibook, .asus, .lenovoyogaslim, .razer) img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+}
